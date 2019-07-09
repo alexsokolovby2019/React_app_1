@@ -6,26 +6,76 @@ import Clock from './AppNew';
 import Button from './Button';
 import * as serviceWorker from './serviceWorker';
 
-
-
-
-
 var leftBorderWidth = 111;
 let second = 2,
     isCh = true,
     isCl = true;
 
+if (second = 2) {
+/*
+    alert('script.js' + Date());
+*/
+}
+else {
+    console.log(Date());
+    console.log(isCh || isCl);
+    alert('script.js' + Date());
+}
+
+(isCh) ? alert('true') : alert('false');
+
+switch (second) {
+    case second < 2:
+        alert('second < 2');
+        break;
+    case second = 2:
+        alert('second = 2');
+        break;
+    case second > 2:
+        alert('second > 2');
+        break;
+    default:
+        alert('?');
+        break;
+}
+
+// циклы
+let n = 1;
+while (n < 5) {
+    console.log(n);
+    n++;
+}
+
+do {
+    console.log(n+10);
+    n++;
+}
+while (n < 10);
+
+for (let i = 1; i < 4; i++) {
+    if (i==3) {
+        continue
+    }
+    console.log(i*100);
+}
+
+function showFirstMessage(text) {
+    let n = 12,
+        second = 3;
+    alert(text + n + "second = "+second);
+}
+
+function calc(a, b) {
+    return a+b;
+}
 
 
-console.log(Date());
-console.log(isCh || isCl);
-
-alert('script.js' + Date());
+//стрелочные функции, не имеют контекста вызова, используются в обработчиках событий
+let calculator = (a, b) => a*b;
 
 
-
-
-
+showFirstMessage("thump up!");
+console.log("second = "+second + calc(5, 10) + calculator(2, 3.97));
 
 function Greet(props) {
     let phrase = "New World!";
